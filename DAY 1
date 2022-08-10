@@ -1,3 +1,88 @@
 WHAT IS WEB?
 -->an interconnected system of public webpages accessible through the Internet.The Web is not the same as the Internet:
 the Web is one of many applications built on top of the Internet.
+
+                                                     -----------------------------------
+
+DNS-->Domain name system:
+The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers
+interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.
+Each device connected to the Internet has a unique IP address which other machines use to find the device. DNS servers eliminate the need for
+humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).
+                                                     -----------------------------------
+
+AJAX--> Asynchronous JavaScript And XML
+AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web 
+page, without reloading the whole page.
+                                                     -----------------------------------
+GraphQL:
+GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable
+description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time,
+and enables powerful developer tools.
+
+                                                     -----------------------------------
+
+HTML,CSS,PHP:
+HTML is a Mark Up Language, CSS is a style sheet language and PHP is a programming language. They all work together though in the browser and can be
+coded into HTML directly or linked. HTML just tells things what order and where they sit on a page as well as the text and other elements. CSS gives further
+styling like color height width, all kinds of style elements in a separate referenced document or actually inline in the html code itself. PHP is an object oriented
+programming language that can do calculations, loops statements, and all kinds of different programming language functions as well as connect to a database and 
+retrieve information and more. What is cool about PHP in html if you are running PHP on your web server, you can simply override certain parts of the html to process
+some PHP and display that to the page in html. So basically writing html with PHP. When you write anything in the html file that starts with <?php  and ends with ?
+everything in between will be PHP. So simple hello world you would write <?php echo 'hello world' ?> and it would print that on the html page given the file was saved
+a hello.php. You could also echo html tags though and those would print to the page. This allows you to dynamically generate html content.
+
+
+                                                     -----------------------------------
+
+JAVASCRIPT(JS):
+JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more. It allows you to implement
+dynamicfeatures on web pages that cannot be done with only HTML and CSS.
+
+                                                     -----------------------------------
+
+WEB SERVER:
+A web server is software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web. 
+The main job of a web server is to display website content through storing, processing and delivering webpages to users.
+
+
+                                                      -----------------------------------
+WEB HOSTING:
+Web hosting is the process of renting or buying space to house a website on the World Wide Web. Website content such as HTML, CSS, and images has to be housed on
+a server to be viewable online.
+
+                                                       -----------------------------------
+
+IP Address:
+An IP address is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules 
+governing the format of data sent via the internet or local network.
+
+                                                        -----------------------------------
+WEB APPLICATION FIREWALL(WAF):
+A WAF or web application firewall helps protect web applications by filtering and monitoring HTTP traffic between a web application and the Internet.
+It typically protects web applications from attacks such as cross-site forgery, cross-site-scripting (XSS), file inclusion, and SQL injection, among others.
+
+                                                        -----------------------------------
+
+
+HTTP vs HTTPS:
+HTTP-->HTTP stands for Hyper Text Transfer Protocol.WWW is about communication between web clients and servers
+Communication between client computers and web servers is done by sending HTTP Requests and receiving HTTP Responses
+
+HTTPS-->Hypertext transfer protocol secure (HTTPS) is the secure version of HTTP, which is the primary protocol used to send data between a web browser 
+and a website. HTTPS is encrypted in order to increase security of data transfer.
+
+COMPARISON-->:
+HTTP lacks security mechanism to encrypt the data whereas HTTPS provides SSL or TLS Digital Certificate to secure the communication between server and client.
+HTTP operates at Application Layer whereas HTTPS operates at Transport Layer.
+HTTP by default operates on port 80 whereas HTTPS by default operates on port 443.
+HTTP transfers data in plain text while HTTPS transfers data in cipher text (encrypt text).
+HTTP is fast as compared to HTTPS because HTTPS consumes computation power to encrypt the communication channel.
+
+                                                        -----------------------------------
+                                                        
+                                                        
+                                                        
+                                                        
+
+
