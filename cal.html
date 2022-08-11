@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>
+               CALCULATOR
+    </title>
+
+    <link rel = "icon" href = 
+             "icons8-calculator-48.png" 
+    type = "image/x-icon">
+
+    <link rel="stylesheet" href="cal.css">
+
+    
+</head>
+<body>
+    <div class="all">
+    <div class="upper">
+        <button class="switch">Switch</button>
+        <h1 class="heading">CALCULATOR</h1>
+    </div>
+    
+    
+<div class="parent">
+
+
+
+
+    <div class="desc">
+        <label class="main2">  FUNCTIONS</label>
+        <ul>· Addition</ul>
+        <ul>· Subtraction</ul>
+        <ul>· Divison</ul>
+        <ul>· Multiplication</ul>
+        <ul>· Modulus</ul>
+        <ul>· Square Root</ul>
+    </div>
+
+
+<div class="full">
+<div class="in">
+    <form method="GET">
+        <input type="text" class="input" value="0" id="input1"   onkeypress="return isNumber(event)" >
+    </form>
+</div>
+
+
+
+<div class="la">
+    <label id="label"></label>
+</div>
+
+    <div class="first">
+        
+        <button id="clear" onclick="clear1()">
+            C
+        </button>
+
+        <button onclick="remove1()" id="remove" <img src="C:\Users\Lenovo\Desktop\ca\icons8-back-50.png" height ="80" width="100" />>
+            
+        </button>
+
+        <button id="mod" onclick="mod1()">
+            %
+        </button>
+
+        <button id="divide" onclick="divide1()">
+            ÷
+        </button>
+    </div>
+
+    <div class="second">
+        <button id="seven" onclick="seven1()"> 
+            7
+        </button>
+
+        <button id="eight"  onclick="eight1()">
+            8
+        </button>
+
+        <button id="nine" onclick="nine1()">
+            9
+        </button>
+
+        <button id="mul" onclick="mul1()">
+            x
+        </button>
+    </div>
+
+    <div class="third">
+        <button id="four" onclick="four1()">
+            4
+        </button>
+
+        <button id="five" onclick="five1()">
+            5
+        </button>
+
+        <button id="six" onclick="six1()">
+            6
+        </button>
+
+        <button id="sub" onclick="sub1()">
+            -
+        </button>
+    </div>
+
+    <div class="fourth">
+        <button id="one" onclick="one1()">
+            1
+        </button>
+
+        <button id="two" onclick="two1()">
+            2
+        </button>
+
+        <button id="three" onclick="three1()">
+            3
+        </button>
+
+        <button id="add"  onkeypress="add2()" onclick="add1()">
+            +
+        </button>
+    </div>
+
+    <div class="fifth" >
+        <button id="sq" onclick="sq1()">
+            √
+        </button>
+
+        <button id="zero" onclick="zero1()">
+            0
+        </button>
+
+        <button id="dot" onclick="dot1()">
+            .
+        </button>
+
+        <button id="enter" onclick="enter1()">
+            =
+        </button>
+    </div>
+    
+   </div>
+
+   <div id="history">
+    <p>HISTORY </p>
+   </div>
+   
+   
+</div>
+</div>
+</body>
+<script src="cal.js"></script>
+</html>
