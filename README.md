@@ -4,3 +4,5 @@ This repository contains all the things i will learn in 365 days starting 11-8-2
 DAY 1:Components of a website
 
 DAY 2:Building a Simple calculator using Html, css , javascript and storing data with local storage in javascript
+
+DAY 3: Cookies and Local storage using javascript
