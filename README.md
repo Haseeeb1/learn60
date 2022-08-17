@@ -12,3 +12,5 @@ DAY 4: TIC TAC TOE using react   ==> src=https://reactjs.org/tutorial/tutorial.h
 DAY 5:Started a book==>( The Road to learn react by robin weiruch )for learning react
 
 DAY 6: Completed half of the book. i will give you some important terms and what they mean in my evernote file.
+
+DAY 7: made a twitter clone by using knowledge from the book and a youtube tutorial.=> Here's the link https://youtu.be/rJjaqSTzOxI
