@@ -10,3 +10,5 @@ DAY 3: Cookies and Local storage using javascript
 DAY 4: TIC TAC TOE using react   ==> src=https://reactjs.org/tutorial/tutorial.html
 
 DAY 5:Started a book==>( The Road to learn react by robin weiruch )for learning react
+
+DAY 6: Completed half of the book. i will give you some important terms and what they mean in my evernote file.
