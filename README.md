@@ -14,3 +14,5 @@ DAY 5:Started a book==>( The Road to learn react by robin weiruch )for learning 
 DAY 6: Completed half of the book. i will give you some important terms and what they mean in my evernote file.
 
 DAY 7: made a twitter clone by using knowledge from the book and a youtube tutorial.=> Here's the link https://youtu.be/rJjaqSTzOxI
+
+DAY 8: created a newscaster app using hackernews api. Here's the link to webpage i made =>  http://bese.vebvay.com/h/hackernews/
