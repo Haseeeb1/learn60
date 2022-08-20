@@ -1,0 +1,75 @@
+I started a book Beginning MERN Stack_ Build and Deploy a Full Stack MongoDB, Express, React, Node.js App-Independently published (2021) by grem lim .
+Here are few of the important and new things i learnt today.
+
+The MERN stack is a popular stack of technologies for building a modern Single Page Application. MERN stands for MongoDB, Express, React and Node.js
+Node.js is one of the most popular server-side frameworks that allow us to execute JavaScript code in a web server.
+- Express is a web application framework for Node.js which makes application development in Node easier and faster. Node and Express
+together form the middle-tier web server of the stack.
+- MongoDB is a NoSQL database which stores data persistently in the form of collections and documents.
+- React is a JavaScript frontend library to build user interfaces.
+
+
+MERN is derived from the popular MEAN stack (MongoDB, Express,
+Angular, Node) where instead of using the Angular frontend framework, we
+use React. Another popular variant is the MEVN where we use Vue as the
+frontend. These frontends make up Single Page Applications (SPAs) which
+avoid reloading the page entirely and just fetches relevant portions of the
+page from the server to display new content.
+
+
+MONGODB::
+
+What is NoSQL database?
+NoSQL databases in contrast are often called non-relational databases, where
+NoSQL means anything that isn ’ t an SQL (see how it infers the popularity
+of SQL?). It might seem like NoSQL is a protest over SQL but it actually
+refers to a database not structured like a spreadsheet, i.e. less rigid than SQL
+databases.
+
+How is mongoDB NoSQL?
+The architecture of MongoDB is a NoSQL database which stores information
+in the form of collections and documents. MongoDB stores one or more
+collections. A collection represents a single entity in our app, for example in
+an e-commerce app, we need entities like categories, users, products. Each of
+these entities will be a single collection in our database.
+
+
+Similar concepts in relational databases and MongoDB::
+- a table in a relational database would compare to a collection in
+MongoDB.
+- each row in a table (in a relational database) can be thought of as a
+document in a collection (in MongoDB).
+- a join operation in SQL can be done with $lookup in MongoDB.
+- instead of foreign keys, we utilize reference in MongoDB.
+
+
+
+Documents look a lot like JSON objects with various properties (though they
+are technically Binary JSON or BSON). An example of a collectiondocument
+tree is shown below:
+Database
+→ Products collection
+→ Product document
+{
+price: 26,
+title: "Learning Node",
+description: "Top Notch Development book",
+expiry date: 27-3-2020
+}
+
+
+What is BSON vs JSON?
+JSON stands for JavaScript Object Notation. BSON stands for Binary JavaScript Object Notation.
+JSON data contains its data basic in JSON format. BSON gives extra datatypes over the JSON data.
+
+Does MongoDB use BSON, or JSON? MongoDB stores data in BSON format both internally, and over the network,
+but that doesn't mean you can't think of MongoDBas a JSON database. Anything you can represent in JSON can be
+natively stored in MongoDB, and retrieved just as easily in JSON.
+
+
+
+
+
+
+
+
