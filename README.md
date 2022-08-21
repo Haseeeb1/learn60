@@ -16,3 +16,5 @@ DAY 6: Completed half of the book. i will give you some important terms and what
 DAY 7: made a twitter clone by using knowledge from the book and a youtube tutorial.=> Here's the link https://youtu.be/rJjaqSTzOxI
 
 DAY 8: created a newscaster app using hackernews api. Here's the link to webpage i made =>  http://bese.vebvay.com/h/hackernews/
+
+DAY 9: Started a full stack mern application building and deploying with a youtube tutorial. 
