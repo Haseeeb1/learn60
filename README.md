@@ -17,4 +17,6 @@ DAY 7: made a twitter clone by using knowledge from the book and a youtube tutor
 
 DAY 8: created a newscaster app using hackernews api. Here's the link to webpage i made =>  http://bese.vebvay.com/h/hackernews/
 
-DAY 9: Started a full stack mern application building and deploying with a youtube tutorial. 
+DAY9 : Learning the basics of mern stack
+
+DAY 10: Started a full stack mern application building and deploying with a youtube tutorial. 
