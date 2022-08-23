@@ -20,3 +20,19 @@ DAY 8: created a newscaster app using hackernews api. Here's the link to webpage
 DAY9 : Learning the basics of mern stack
 
 DAY 10: Started a full stack mern application building and deploying with a youtube tutorial. 
+
+
+{
+  DAY 11: Created the server side for a full stack mern application which stores memories.
+
+  DAY 12: Learnt basics of express and how to connect mongo db atlas cluster to backend and frontend of a project.
+   
+  DAY 13: Created the client side of the website which stores memories.
+                
+  DAY 14: Learnt how to deploy front end and backend of a website with netlify and heroku.
+         
+                               here is the result: https://memories-storageee.netlify.app/                               
+ }
+ 
+ 
+ 
