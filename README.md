@@ -31,7 +31,7 @@ DAY 10: Started a full stack mern application building and deploying with a yout
                 
   DAY 14: Learnt how to deploy front end and backend of a website with netlify and heroku.
          
-                               here is the result: https://memories-storageee.netlify.app/                               
+                      https://memories-storageee.netlify.app/                               
  }
  
  
