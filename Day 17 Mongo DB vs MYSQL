@@ -1,0 +1,56 @@
+What is MongoDB?
+MongoDB is a document-oriented NoSQL database used for high volume data storage. MongoDB is a database that came into light around the mid-2000s. It comes under the
+category of a NoSQL database.This kind of DBMS uses dynamic schemas that mean that you can create records without first defining the structure, such as the fields
+or the types and their values.MongoDB allows you to change the structure of records, which we call documents by adding new fields or deleting existing ones.
+
+
+What is MySQL?
+MYSQL is a popular and widely used DBMS system. The name is taken from the girl name My, who is the daughter of the co-founder Michael Widenius. The source code of MYSQL 
+is available under the GNU GPL. The project is owned and maintained by Oracle Corporation.It is an RDBMS (Relational Database Management System) and works primarily on 
+the relational database model. It makes database administration easier and more flexible.In MySQL, you need to pre-define your database schema based on your requirements
+and set up rules that help you to govern the relationships between fields in your tables.
+
+
+Key Difference Between MongoDB and MySQL
+MongoDB represents data as of JSON documents whereas MySQL represents data in tables and rows.
+In MongoDB, you don’t need to define the schema while in MySQL you need to define your tables and columns
+MongoDB doesn’t support JOIN but MySQL supports JOIN operations.
+MongoDB uses JavaScript as query language while MySQL uses the Structured Query Language (SQL).
+MongoDB is an ideal choice if you have unstructured and/or structured data with the potential for rapid growth while MYSQL is a great choice if you have
+structured data and need a traditional relational database.
+If most of your services are cloud based MongoDB is the best suited for you but If data security is your priority then MYSQL is the best option for you.
+
+
+
+Why Use MongoDB?
+Here are the main reasons for using MongoDB:
+MongoDB is very flexible and adaptable to real business world situations and requirements.
+Queries can be made to return certain fields within documents.
+MongoDB supports field, range-based query, regular expression, etc. for searching the data from the stored data.
+MongoDB is a very easy DBMS system that can easily scale up or down.
+MongoDB helps you to uses internal memory for storing the working temporary datasets for which it is much faster.
+MongoDB offers primary and secondary indexes on any field.
+MongoDB supports the replication of the database.
+You can use MongoDB as a file storage system which is known as a GridFS.
+MongoDB offers various methods to perform aggregation operations on the data like aggregation pipeline, map-reduce or single objective aggregation commands.
+MongoDB allows you to store any type of file which can be any size without effecting our stack
+MongoDB basically uses JavaScript objects in place of the procedure.
+MongoDB supports special collection type like TTL (Time-To-Live) for data storage which will expire at a certain time
+The dynamic database schema used in MongoDB is called the JSON
+Indexes can be created to improve the performance of searches within MongoDB. Any field in a MongoDB document can be indexed.
+Replication – MongoDB can provide high availability with replica sets
+MongoDB can run over multiple servers, balancing the load and/or duplicating data to keep the system up and running in case of hardware failure.
+
+
+
+
+
+Why use MySQL?
+Here are some important reasons for using MYSQL:
+Supports features like Master-Slave Replication, Scale-Out
+It supports Offload Reporting, Geographic Data Distribution, etc.
+Very Low overhead with MyISAM storage engine when used for read-mostly applications
+Support for memory storage engine for frequently used tables
+Query Cache for repeatedly used statements
+You can easily learn and troubleshoot MySQL from different sources like blogs, white papers, and books.
+
