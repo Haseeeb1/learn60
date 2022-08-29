@@ -37,3 +37,6 @@ DAY 10: Started a full stack mern application building and deploying with a yout
  
  DAY 15: Started a book for Node.js 
  
+DAY 16:Learning more about mongo db and explored how it works.
+
+DAY 17: Mongo db vs mysql comparison
