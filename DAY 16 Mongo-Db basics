@@ -1,0 +1,39 @@
+Key Aspects of MongoDB
+Here are some of the key concepts and terms you will encounter as you learn about MongoDB.
+
+Documents: The Records in a Document Database
+Collections: Grouping Documents
+Replica Sets: Ensuring High Availability
+Sharding: Scalability to Handle Massive Data Growth
+Indexes: Improving Query Speed
+Aggregation Pipelines: Fast Data Flows
+Programming Languages: Does MongoDB Speak Your Language?
+How to Monitor MongoDB
+MongoDB Cloud
+
+
+
+Documents: The Records in a Document Database
+MongoDB stores data as JSON documents.
+The document data model maps naturally to objects in application code, making it simple for developers to learn and use.
+The fields in a JSON document can vary from document to document. Compare that to a traditional relational database table, where adding a field means adding a column to the database
+table itself and therefore to every record in the database.
+Documents can be nested to express hierarchical relationships and to store structures such as arrays.
+The document model provides flexibility to work with complex, fast-changing, messy data from numerous sources. It enables developers to quickly deliver new application functionality.
+For faster access internally and to support more data types, MongoDB converts documents into a format called Binary JSON or BSON. But from a developer perspective, MongoDB is a JSON database.
+
+
+In MongoDB, a collection is a group of documents.
+If you are familiar with relational databases, you can think of a collection as a table. But collections in MongoDB are far more flexible. Collections do not enforce
+a schema, and documents in the same collection can have different fields.
+Each collection is associated with one MongoDB database. To show which collections are in a particular database, use the command listCollections.
+An important way to ensure high availability is by keeping more than one copy of your data. With MongoDB, high availability is built right into the design.
+When you create a database in MongoDB, the system automatically creates at least two more copies of the data, referred to as a replica set. A replica 
+set is a group of at least three MongoDB instances that continuously replicate data between them, offering redundancy and protection against downtime
+in the face of a system failure or planned maintenance.
+
+
+
+
+
+
