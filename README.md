@@ -40,3 +40,7 @@ DAY 10: Started a full stack mern application building and deploying with a yout
 DAY 16:Learning more about mongo db and explored how it works.
 
 DAY 17: Mongo db vs mysql comparison
+
+DAY 18-19: Completed a youtube course for express and node.
+
+DAY 20: Learnt about Socket.io for making a chat application. 
