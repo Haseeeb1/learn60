@@ -44,3 +44,5 @@ DAY 17: Mongo db vs mysql comparison
 DAY 18-19: Completed a youtube course for express and node.
 
 DAY 20: Learnt about Socket.io for making a chat application. 
+
+DAY 21: Learnt about react-redux
