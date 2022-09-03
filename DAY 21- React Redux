@@ -1,0 +1,8 @@
+Redux itself is a standalone library that can be used with any UI layer or framework, including React, Angular, Vue, Ember, and vanilla JS.
+Although Redux and React are commonly used together, they are independent of each other.If you are using Redux with any kind of UI framework,
+you will normally use a "UI binding" library to tie Redux together with your UI framework, rather than directly interacting with the store
+from your UI code.React Redux is the official Redux UI binding library for React. If you are using Redux and React together, you should also
+use React Redux to bind these two libraries.
+
+You can read the docs on their official website. Here's is a link to a tutorial that will help you understand react-redux better
+https://youtu.be/CVpUuw9XSjY
