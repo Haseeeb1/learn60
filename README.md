@@ -55,3 +55,8 @@ DAY 22: Started to learn and research on tools for a one-to-one and group chat a
 
 
 DAY 23: Learnt basics of socket.io
+
+DAY 24: react-bootstrap
+
+DAY 25: Making a pattern
+
