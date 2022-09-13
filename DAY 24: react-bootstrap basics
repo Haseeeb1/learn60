@@ -1,0 +1,15 @@
+
+REACT BOOTSTRAP:
+React-Bootstrap replaces the Bootstrap JavaScript. Each component has been built from scratch as a true React component, without 
+unneeded dependencies like jQuery.As one of the oldest React libraries, React-Bootstrap has evolved and grown alongside React, making it
+an excellent choice as your UI foundation.
+
+DOCS:
+ https://react-bootstrap.github.io/
+
+Youtube :
+   https://youtu.be/8pKjULHzs0s
+
+ 
+ I created some basic forms and pages with react bootstrap for practice and getting to know the basics.
+ 
