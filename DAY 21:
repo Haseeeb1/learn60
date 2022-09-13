@@ -1,0 +1,30 @@
+After having grabbed some basics of the mern stack it is time to create a project using mern. I researched on some basic projects to do for beginners
+and found a chat app listed at most places so i decided to give a go. 
+Here are few things i had to solve/learn before starting:
+
+1).Firstly, i had to learn to setup a local mongodb as it is easier to use and i also had to get some practice to use mongoose.
+
+2).Secondly, i had to learn basics of socket io which was necessary to create a real time chat application.
+
+3). Learning react-bootstrap as it is quite a handy tool in creating responsive webpages.
+
+4).Learn to use Font awesome icons.(not necessary).
+
+5).Brainstorming on how many different database models to create and how to store the messages,users etc 
+
+6).figuring out necessary modules to install.
+
+
+DAY 22:First day:
+
+  I set up my local mongodb. Here's a video on how to do it.  
+  
+                                              https://youtu.be/FwMwO8pXfq0
+  
+  A tip: mongodb://0.0.0.0:27017/mern-chat-app  
+  
+   Edit the connection string as 0.0.0.0 before :27017 .In my case the connection string provided by mongodb was without 0.0.0.0 thing which didnt work
+   
+ 
+ seeya tom!
+ bye
