@@ -48,5 +48,7 @@ DAY 20: Learnt about Socket.io for making a chat application.
 DAY 21: Learnt about react-redux
 
 { 
+
                                                         Day 22-DAY 35 ==> MERNStack-CHAT-APPLICATION
+                                                        
 DAY 22: Started to learn and research on tools for a one-to-one and group chat app.
