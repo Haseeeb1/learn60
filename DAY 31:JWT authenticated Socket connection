@@ -1,0 +1,82 @@
+Although socket io provides real time chatting feature but it does not provide any authentication or peotection.Anyone can connect to the server and he 
+can emit the socket events which is a great vulnerable issue.
+
+So to solve it i used jwt token . Everytime a user logs in a new jwt token will be generated under the tokens array in database. The last token value will then be matched
+with a cookie value stored in the browser after user Logs in.As the token stored in the cookie is the same as stored in database.
+
+The socket connection opens only if both token values match exactly otherwise socket connection never opens and the attacker/hacker cannot emit socket events.
+
+Read about json web token here:=>https://www.npmjs.com/package/jsonwebtoken
+
+here is the jwt code:
+
+
+
+const jwt = require("jsonwebtoken");
+const User = require("../models/User.js");
+let hello;
+const authenticate = async (req, res, next) => {
+  try {
+    const token = req.cookies.jwtoken;
+    const verifyToken = jwt.verify(token, process.env.SECRET_KEY);
+    const rootUser = await User.findOne({
+      _id: verifyToken._id,
+      "tokens.token": token,
+    });
+    if (!rootUser) {
+      throw new Error("User Not found");
+    }
+    req.token = token;
+    req.rootUser = rootUser;
+    req.userID = rootUser._id;
+    next();
+  } catch (err) {
+    res.status(401).send("Unauthorized");
+    console.log(err);
+  }
+};
+(module.exports = authenticate), hello;
+
+
+
+
+
+How is cookie sent from front end to backend??
+It is sent as an extra header option when the socket connection req is sent from frontend .
+
+
+SOCKET AUTHENTICATION:
+
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
+io.use(async (socket, next) => {
+  //  const user=User.find({'email':email});//{'tokens': {$slice: -1===token}});
+  try {
+    const emailuser = await socket.handshake.headers["email"];
+    const token = await socket.handshake.headers["token"];
+    if (token != "undefined" && emailuser != "undefined") {
+      const lastToken = await returnToken(emailuser);
+      //  console.log(lastToken);
+      if (token === lastToken) {
+        //console.log("authenticated");
+        const user = await User.find({ email: emailuser });
+        user[0].status = "online";
+        await user[0].save();
+        next();
+      }
+    }
+  } catch (err) {
+    next(new Error("Login , unauthorized access"));
+  }
+});
+
+
+
+
+
+
+
