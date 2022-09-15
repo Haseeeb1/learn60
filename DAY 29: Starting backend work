@@ -1,0 +1,26 @@
+After making the frontend part i started the backend part . I installed the required dependenices and made routes for getting user signed up here is the request
+for signup.
+(I have shown the schemas already in previous file):
+
+
+router.post("/", async (req, res) => {
+  try {
+    const { name, email, password, picture } = req.body;
+    const user = await User.create({ name, email, password, picture });
+    res.status(201).json(user);
+  } catch (e) {
+    let msg;
+    if (e.code === 11000) {
+      msg = "user already exists";
+    } else {
+      e.message;
+    }
+    console.log(e);
+    res.status(400).json(msg);
+  }
+});
+
+
+This took quite a lot of time, after that i linked my frontend form data to a post request and it worked. The database got new entries. it gave a error if a 
+user signed up with email which already existed.
+
