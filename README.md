@@ -69,3 +69,5 @@ DAY 28: Home Page and message page components.
 DAY 29: Starting backend work
 
 DAY 30: hashing passwords and making login routes
+
+DAY 31:JWT authenticated Socket connection 
