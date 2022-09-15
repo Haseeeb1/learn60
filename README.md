@@ -61,3 +61,5 @@ DAY 24: react-bootstrap
 DAY 25: Making a pattern
 
 DAY 26: File structuring and sign up page
+
+DAY 27: Login Page and Change password page.
