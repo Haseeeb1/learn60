@@ -1,0 +1,330 @@
+i thought of creating a home page for when user opens the web he will be directed to homepage and not directly to the
+login or chat page.
+For the message page styling and creation i took help of a resource from youtube.
+
+Here is my Home component.
+
+import React from "react";
+import { Row, Col, Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { LinkContainer } from "react-router-bootstrap";
+import "./Home.css";
+
+function Home() {
+  const user = useSelector((state) => state.user);
+
+  function refresh() {
+    window.location.reload();
+  }
+
+  function timeFunction() {
+    setTimeout(function () {
+      window.location.reload();
+    }, 70);
+  }
+  return (
+    <Row>
+      
+      <Col
+        md={6}
+        className="d-flex flex-direction-column align-items-center justify-content-center"
+      >
+        <div>
+        
+
+          <h1 className="share"><span>Share</span> <span>the</span> <span>world</span> <span>with</span> <span>your</span> <span>friends</span></h1>
+          <p className="instant"><span class="title-word title-word-1">Instant &nbsp;</span>
+    <span >Personal &nbsp;</span>
+    <span >and &nbsp;</span>
+    <span>group &nbsp;</span>
+    <span>Chatting &nbsp;</span>
+    </p>
+          {user && (
+            <LinkContainer to="/chat">
+              <Button variant="success" onClickCapture={timeFunction}>
+                Get started{" "}
+                <i className="fas fa-comments home-message-icon"></i>
+              </Button>
+            </LinkContainer>
+          )}
+          {!user && (
+            <LinkContainer to="/login">
+              <Button variant="success">
+                Login <i className="fas fa-comments home-message-icon"></i>
+              </Button>
+            </LinkContainer>
+          )}
+        </div>
+      </Col>
+      <Col md={6} className="home__bg"></Col>
+    </Row>
+  );
+}
+
+export default Home;
+
+
+
+
+My message page component which includes sidebar and a messageform.
+
+SIDEBAR:
+
+ return (
+    <>
+      <h2 className="rooms-tag">Group Chats</h2>
+      <ListGroup className="rooms_box">
+        {rooms.map((room, idx) => (
+          <ListGroup.Item
+            className="rooms_name"
+            key={idx}
+            onClick={() => joinRoom(room)}
+            active={room == currentRoom}
+            style={{
+              cursor: "pointer",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            {room}
+            {currentRoom !== room && (
+              <span className="badge rounded-pill bg-primary">
+                {user.newMessages[room]}
+              </span>
+            )}
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
+<div className="members_div">
+      <h2 className="members-tag">Members</h2>
+      <Form className="form_search">
+            <Form.Group className="mb-2" controlId="formBasicEmail">
+              <Form.Control
+                className="field_input"
+                type='text'
+                placeholder="Search by Name"
+               onChange={(e) => hellojee(e.target.value)}
+              />
+            </Form.Group>
+          </Form>
+          </div>
+      {newMembers.length>0?
+  
+<ListGroup className="grouplist">
+        {newMembers.map((member) => (
+          <ListGroup.Item
+            className="list-full"
+            key={member.id}
+            style={{
+              backgroundColor: "#e5e4e2",
+              cursor: "pointer",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+            active={privateMemberMsg?._id == member?._id}
+            onClick={() => handlePrivateMemberMsg(member)}
+            disabled={member._id == user._id}
+          >
+            <Row>
+              <Col xs={2} className="member-status">
+                <img src={member.picture} className="member-status-img" />
+                {member.status == "online" ? (
+                  <i className="fas fa-circle sidebar-online-status"></i>
+                ) : (
+                  <i className="fas fa-circle sidebar-offline-status"></i>
+                )}
+              </Col>
+              <Col xs={9} className="white-span">
+                
+                {member._id === user?._id ? (
+                  <span className="member_name_text">You</span>
+                ) : (
+                  <span className="member_name_text">
+                    {member.name}
+                   
+                  </span>
+                )}
+              </Col>
+              
+            
+            </Row>
+            <Col xs={1}>
+            <span className="badge rounded-pill bg-primary">
+              {user.newMessages[orderIds(member._id, user._id)]}
+            </span>
+            </Col>
+          </ListGroup.Item>
+        ))}
+      </ListGroup>
+:
+      <ListGroup className="grouplist">
+         {members.map((member) => (
+          <ListGroup.Item
+            className="list-full"
+            key={member.id}
+            style={{
+              backgroundColor: "#e5e4e2",
+              cursor: "pointer",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+            active={privateMemberMsg?._id == member?._id}
+            onClick={() => handlePrivateMemberMsg(member)}
+            disabled={member._id == user._id}
+          >
+            <Row>
+              <Col xs={2} className="member-status">
+                <img src={member.picture} className="member-status-img" />
+                {member.status == "online" ? (
+                  <i className="fas fa-circle sidebar-online-status"></i>
+                ) : (
+                  <i className="fas fa-circle sidebar-offline-status"></i>
+                )}
+              </Col>
+              <Col xs={9} className="white-span">
+               
+                {member._id === user?._id ? (
+                  <span className="member_name_text">You</span>
+                ) : (
+                  <span className="member_name_text">
+                    {member.name}
+                    {member.status == "offline" && "  (Offline) "}
+                  </span>
+                )}
+              </Col>
+            </Row>
+            <Col xs={1}>
+          <span className="badge rounded-pill bg-primary">
+            {user.newMessages[orderIds(member._id, user._id)]}
+          </span>
+        </Col>
+          </ListGroup.Item>
+          
+        ))}
+        
+      </ListGroup>
+}
+    </>
+
+  );
+}
+
+export default Sidebar;
+
+
+MESSAGE FORM component:
+
+return (
+    <>
+      <div className="messages-output">
+        {user && !privateMemberMsg?._id && (
+          <div className="alert alert-info room-div">
+            You are in the {currentRoom} room
+          </div>
+        )}
+
+        {user && privateMemberMsg?._id && (
+          <>
+            <div className="alert alert-info conversation-info">
+              <div>Your conversation with {privateMemberMsg.name}</div>
+            </div>
+          </>
+        )}
+
+        {!user && <div className="alert alert-danger">Please Login</div>}
+
+        {user &&
+          messages.map(({ _id: date, messagesByDate }, idx) => (
+            <div key={idx}>
+              <p className="alert alert-info text-center message-date-indicator">
+                {date}
+              </p>
+              {messagesByDate?.map(
+                ({ _id, content, time, from: sender, isFile }, msgIdx) => (
+                  <div
+                    className={
+                      sender?.email == user?.email
+                        ? "message"
+                        : "incoming-message"
+                    }
+                    key={msgIdx}
+                  >
+                    <div className="message-inner">
+                      <div className="d-flex align-items-center mb-0">
+                        <p className="message-sender">
+                          {sender._id == user?._id ? "You" : sender.name}
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          {time}
+                          {sender._id == user?._id && (
+                            <label onClick={() => deleteText(_id)}>
+                              <i className="fa-solid fa-trash-can trash_icon"></i>
+                            </label>
+                          )}
+                        </p>
+                      </div>
+                      {isFile === true ? (
+                        <>
+                          <h6 className="tagfile">FILE </h6>
+                          <p>{content}</p>
+                          <a
+                            className="filename"
+                            href={"http://localhost:5001/resources/" + content}
+                            target="_blank"
+                            download
+                          >
+                            Click to download/open
+                          </a>{" "}
+                        </>
+                      ) : (
+                        <p className="message-content">{content}</p>
+                      )}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          ))}
+
+        <div ref={messageEndRef} />
+      </div>
+      <Form onSubmit={handleSubmit}>
+        <Row>
+          <Col md={11}>
+            <Form.Group>
+              <Form.Control
+                className="message-box"
+                type="text"
+                placeholder="Your message"
+                disabled={!user}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+          </Col>
+          <Col md={1}>
+            <Button
+              className="button-fly"
+              variant="primary"
+              type="submit"
+              style={{ width: "100%", backgroundColor: "orange" }}
+              disabled={!user}
+            >
+              <i className="fas fa-paper-plane"></i>
+            </Button>
+            <label htmlFor="file-upload">
+              <i className="fas fa-file-alt file-icon"></i>
+            </label>
+            <input
+              id="file-upload"
+              type="file"
+              hidden
+              onChange={(e) => fileChangeHandler(e)}
+            />
+          </Col>
+        </Row>
+      </Form>
+    </>
+  );
+}
+
+export default MessageForm;
