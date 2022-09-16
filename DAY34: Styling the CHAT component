@@ -1,0 +1,39 @@
+The app is almost complete and now styling is left. Although i used react-bootstrap for most of the part but css was still necessary i styled my components
+and also fixed some bugs in the api. here is the final App-api
+
+const appApi = createApi({
+  reducerPath: "appApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://localhost:5001",
+  }),
+  endpoints: (builder) => ({
+    signupUser: builder.mutation({
+      query: (user) => ({
+        url: "/users",
+        method: "POST",
+        body: user,
+        credentials: "include",
+      }),
+    }),
+    loginUser: builder.mutation({
+      query: (user) => ({
+        url: "/users/login",
+        method: "POST",
+        body: user,
+        credentials: "include",
+      }),
+    }),
+    logoutUser: builder.mutation({
+      query: (payload) => ({
+        url: "/logout",
+        method: "DELETE",
+        body: payload,
+        // credentials: "include"
+      }),
+    }),
+  }),
+});
+
+
+
+other functionality was added thorugh sockets and post/get requests
