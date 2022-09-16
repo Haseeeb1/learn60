@@ -76,4 +76,13 @@ DAY 32: Making socet events at backend
 
 DAY 33: Making admin panel and adding delete message functionality
 
-DAY34: Styling the CHAT component
+DAY 34: Styling the CHAT component
+
+DAY 35: COMPLETING My first mern-stack-application
+
+                                           https://github.com/Haseeeb1/MERN-CHAT-APP-backend
+     
+     
+                                           https://github.com/Haseeeb1/MERN-CHAT-APP-frontend
+                                           
+}
