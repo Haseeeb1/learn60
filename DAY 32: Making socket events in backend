@@ -1,0 +1,131 @@
+Socket io executes a function socket.on{(...)} when a event is emitted from the frontend . I made the following for my chat app.
+
+
+WHEN A NEW USER ENTERS THE CHAT:
+socket.on("join-room", async (newRoom, previousRoom) => {
+    socket.join(newRoom);
+    socket.leave(previousRoom);
+    let roomMessages = await getLastMessagesFromRoom(newRoom);
+    roomMessages = sortRoomMessagesByDate(roomMessages);
+    socket.emit("room-messages", roomMessages);
+  });
+
+
+
+WHEN ADMIN CREATES A GROUP:
+  socket.on("add-group", async (name, members) => {
+    const today = new Date();
+    const minutes =
+      today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
+
+    await Rooms.create({
+      name: name,
+      createdDate: getFormattedDate(),
+      createdTime: today.getHours() + ":" + minutes,
+      Members: members,
+    });
+    socket.emit();
+  });
+
+
+
+WHEN ADMIN REMOVES A USER:
+  socket.on("remove-user", async (id) => {
+    const user = await User.findById(id);
+    const query = { "from._id": id };
+    const message = await Message.find(query);
+    //console.log(message);
+    if (user) {
+      const h = await Message.deleteMany({ "from._id": id });
+      await user.deleteOne(user);
+    }
+    socket.emit();
+  });
+
+
+
+WHEN A NEW MESSAGE COMES IN ROOM:
+  socket.on(
+    "message-room",
+    async (room, content, sender, time, date, isFile) => {
+      const newMessage = await Message.create({
+        content,
+        from: sender,
+        time,
+        date,
+        to: room,
+        isFile: isFile,
+      });
+      let roomMessages = await getLastMessagesFromRoom(room);
+      roomMessages = sortRoomMessagesByDate(roomMessages);
+      io.to(room).emit("room-messages", roomMessages);
+      socket.broadcast.emit("notifications", room);
+    }
+  );
+
+
+WHEN USER DELETES A MESSAGE:
+  socket.on("deleteMessage", async (id, room) => {
+    const message = await Message.find({ _id: id });
+    if (message[0].isFile) {
+      const path = `./files/${message[0].content}`;
+      try {
+        fs.unlinkSync(path);
+        //  console.log("file removed");
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    await Message.deleteOne({ _id: id });
+    //console.log("deleted");
+    let roomMessages = await getLastMessagesFromRoom(room);
+    roomMessages = sortRoomMessagesByDate(roomMessages);
+    io.to(room).emit("room-messages", roomMessages);
+  });
+
+
+
+WHEN ADMIN DELETES A ROOM:
+  socket.on("delete-room", async (room) => {
+    await Rooms.deleteOne({ name: room });
+    socket.emit();
+  });
+
+
+
+
+WHEN USER LOGOUTS:
+  app.delete("/logout", async (req, res) => {
+    try {
+      const { _id, newMessages } = req.body;
+      const user = await User.findById(_id);
+      user.status = "offline";
+      user.newMessages = newMessages;
+      await user.save();
+      const members = await User.find();
+      socket.broadcast.emit("new-user", members);
+
+      res.status(200).send();
+      socket.disconnect();
+    } catch (e) {
+      console.log(e);
+      res.status(400).send();
+    }
+  });
+
+
+THIS IS A FUNCTION OF SOCKET i.e disconnect which is run after socket connection ia dismissed:
+  socket.on("disconnect", async function () {
+    const emailuser = await socket.handshake.headers["email"];
+    try {
+      const user = await User.find({ email: emailuser });
+      user[0].status = "offline";
+      await user[0].save();
+      const members = await User.find();
+      socket.broadcast.emit("new-user", members);
+    } catch (err) {
+      console.log(err);
+    }
+    socket.disconnect();
+  });
+});
