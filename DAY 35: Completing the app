@@ -1,0 +1,9 @@
+After styling , i checked the app after signing up from multiple accounts changing the password and using it again and again for finding some bugs.
+I fixed a bug where after user signs up he is directly taken to chat page which is not a good practice. so i changed it to login after a user signs up 
+and for most part . My first mern application was complete.
+
+GITHUB REPOS:
+
+https://github.com/Haseeeb1/MERN-CHAT-APP-frontend
+
+https://github.com/Haseeeb1/MERN-CHAT-APP-backend
