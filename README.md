@@ -73,3 +73,5 @@ DAY 30: hashing passwords and making login routes
 DAY 31:JWT authenticated Socket connection 
 
 DAY 32: Making socet events at backend
+
+DAY 33: Making admin panel and adding delete message functionality
