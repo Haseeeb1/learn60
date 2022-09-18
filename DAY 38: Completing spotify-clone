@@ -1,0 +1,15 @@
+I made the components of main page and use the spotify api to get user playlists and a discover weekly data and users image and display name .Following were the components
+for main page.
+
+PLAYER(Main page)
+    HEADER
+    SIDEBAR
+    FOOTER
+        
+        
+ Here is the link to github rep for the project..
+ 
+ 
+                                   
+                                   
+                                   https://github.com/Haseeeb1/SPOTIFY-CLONE-with-Reactjs-and-spotify-web-api
