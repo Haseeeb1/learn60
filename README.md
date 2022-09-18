@@ -86,3 +86,9 @@ DAY 35: COMPLETING My first mern-stack-application
                                            https://github.com/Haseeeb1/MERN-CHAT-APP-frontend
                                            
 }
+
+DAY 36: Spotify-web-api
+
+DAY 37: Spotify-clone-day1
+
+DAY 37: completing spotify-clone
