@@ -98,4 +98,4 @@ DAY 38: completing spotify-clone
 
 DAY 39: Making a netflix clone using ReactJS.
                    
-                     https://netflix-h.netlify.app/
+                                          https://netflix-h.netlify.app/
