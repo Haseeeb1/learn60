@@ -1,0 +1,5 @@
+I created a netflix clone using react js and the movies data base api which gives information of movies. It is a very helpful api.
+I also added the trailer functionailty using "react-youtube" and "Movie-trailer" modules which made this work a lot easier
+
+
+Link to github rep: https://github.com/Haseeeb1/NETFLIX-with-React-JS
