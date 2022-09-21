@@ -1,0 +1,109 @@
+I started creating the youtube clone with react icons. I used no api's in this and used material UI icons which is a very handy tool for any type of icons:
+
+MATERIAL UI: https://mui.com/material-ui/material-icons/
+
+I created the sidebar and navigation bar today. Here is the code . the css was alot of hassle.
+
+import React from "react";
+import "./Sidebar.css";
+import SidebarRow from "./SidebarRow";
+import HomeIcon from "@material-ui/icons/Home";
+import WhatshotIcon from "@material-ui/icons/Whatshot";
+import SubscriptionsIcon from "@material-ui/icons/Subscriptions";
+import VideoLibrarayIcon from "@material-ui/icons/VideoLibrary";
+import HistoryIcon from "@material-ui/icons/History";
+import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
+import WatchLaterIcon from "@material-ui/icons/WatchLater";
+import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbDownAltOutlined";
+import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
+
+function Sidebar() {
+  return (
+    <div className="sidebar">
+      <SidebarRow selected Icon={HomeIcon} title="Home" />
+      <SidebarRow Icon={WhatshotIcon} title="Trending" />
+      <SidebarRow Icon={SubscriptionsIcon} title="Subscriptions" />
+      <hr />
+      <SidebarRow Icon={VideoLibrarayIcon} title="Library" />
+      <SidebarRow Icon={HistoryIcon} title="History" />
+      <SidebarRow Icon={OndemandVideoIcon} title="Your Videos" />
+      <SidebarRow Icon={WatchLaterIcon} title="Watch Later" />
+      <SidebarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos" />
+      <SidebarRow Icon={ExpandMoreOutlinedIcon} title="Show more" />
+    </div>
+  );
+}
+
+export default Sidebar;
+
+import React from "react";
+import "./SidebarRow.css";
+
+function SidebarRow({ selected, Icon, title }) {
+  return (
+    <div className={`sidebarRow ${selected && "selected"}`}>
+      <Icon className="sidebarRow__icon" />
+      <h2 className="sidebarRow__title"> {title}</h2>
+    </div>
+  );
+}
+
+export default SidebarRow;
+
+
+
+
+
+HEADER:
+
+import React, { useState } from "react";
+import MenuIcon from "@material-ui/icons/Menu";
+import SearchIcon from "@material-ui/icons/Search";
+import VideoCallIcon from "@material-ui/icons/VideoCall";
+import AppsIcon from "@material-ui/icons/Apps";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import Avatar from "@material-ui/core/Avatar";
+import "./Header.css";
+
+function Header() {
+  return (
+    <div className="header">
+      <div className="header__left">
+        <MenuIcon className="header__menuIcon" />
+        <img
+          className="header__logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
+          alt="Youtube Icon"
+        />
+      </div>
+      <div className="header__input">
+        <input
+          disabled
+          className="header__field"
+          placeholder="Search"
+          type="text"
+        />
+        <SearchIcon className="header__inputButton" />
+      </div>
+      <div className="header__icons">
+        <VideoCallIcon className="header__icon" />
+        <AppsIcon className="header__icon" />
+        <NotificationsIcon className="header__icon" />
+        <Avatar
+          alt="Me"
+          src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2020/10/peaky-blinders-do-you-know-cillian-murphy-as-thomas-shelby-smoked-3000-cigarettes-in-just-2-seasons-002.jpg"
+        />
+      </div>
+    </div>
+  );
+}
+
+export default Header;
+
+
+
+
+SEE the complete code here:https://github.com/Haseeeb1/YouTube-With-ReactJS
+
+DEPLOYED APP: https://youtube-h.netlify.app/
+
