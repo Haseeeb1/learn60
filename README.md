@@ -109,3 +109,5 @@ DAY 40-41: YOUTUBE with ReactJS And MaterialUI Icons
                                 
                                 
 DAY 42: Revising React Hooks
+
+DAY 43: Chrome Extension with react which gives a new word and its meaning every time button is clicked
