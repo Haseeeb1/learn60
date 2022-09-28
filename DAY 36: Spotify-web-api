@@ -22,6 +22,6 @@ DELETE	Deletes resources
 
 
 Responses
-Web API responses normally include a JSON object. Browse the reference documentation to find descriptions of common responses from each endpoint.
+Web API responses normally include a JSON object Browse the reference documentation to find descriptions of common responses from each endpoint.
 
 Read more here: https://developer.spotify.com/documentation/web-api/ 
