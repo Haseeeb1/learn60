@@ -1,0 +1,30 @@
+YOUTUBE: https://youtu.be/9kRgVxULbag
+
+
+Firebase is a backend platform for building Web, Android and IOS applications. It offers real time database, different APIs, multiple authentication types and hosting 
+platform. This is an introductory tutorial, which covers the basics of the Firebase platform and explains how to deal with its various components and sub-components.
+
+As per official Firebase documentation −
+
+Firebase can power your app's backend, including data storage, user authentication, static hosting, and more. Focus on creating extraordinary user experiences.
+We will take care of the rest. Build cross-platform native mobile and web apps with our Android, iOS, and JavaScript SDKs. You can also connect Firebase to your
+existing backend using our server-side libraries or our REST API.
+
+Firebase Features
+Real-time Database − Firebase supports JSON data and all users connected to it receive live updates after every change.
+
+Authentication − We can use anonymous, password or different social authentications.
+
+Hosting − The applications can be deployed over secured connection to Firebase servers.
+
+Firebase Advantages
+It is simple and user friendly. No need for complicated configuration.
+
+The data is real-time, which means that every change will automatically update connected clients.
+
+Firebase offers simple control dashboard.
+
+There are a number of useful services to choose.
+
+Read More Here:
+   https://www.tutorialspoint.com/firebase/firebase_quick_guide.htm
