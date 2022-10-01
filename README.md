@@ -115,3 +115,17 @@ DAY 43: Chrome Extension with react which gives a new word and its meaning every
 DAY 44: Reading react-redux documentation
 
 DAY 45: React-redux youtube tutotrial
+
+DAY 46-50 :Linkedin with react,redux and firebase{
+   
+   DAY 46: Learning basics about firebase
+   
+   Day 47: Starting with the sidebar and header components
+   
+   DAY 48: Making the widgets and login page
+   
+   Day 49 integrating firebase authorization and accessing database
+   
+   Day 50: completing the redux part and deploying the app
+  
+}
