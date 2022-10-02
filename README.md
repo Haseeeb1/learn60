@@ -116,7 +116,9 @@ DAY 44: Reading react-redux documentation
 
 DAY 45: React-redux youtube tutotrial
 
-DAY 46-50 :Linkedin with react,redux and firebase{
+DAY 46-50 :Linkedin with react,redux and firebase
+
+  {
    
    DAY 46: Learning basics about firebase
    
@@ -132,4 +134,4 @@ DAY 46-50 :Linkedin with react,redux and firebase{
                                                      https://linkedin-h.netlify.app/
                                                      
    
-}
+   }
