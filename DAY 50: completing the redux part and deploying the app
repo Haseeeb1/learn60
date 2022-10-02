@@ -1,0 +1,50 @@
+Redux is a very handy tool to not get stuck in prop drilling.
+
+PROP-DRILLING:
+Prop drilling is the unofficial term for passing data through several nested children components, in a bid to deliver this data to a deeply-nested component.
+The problem with this approach is that most of the components through which this data is passed have no actual need for this data
+
+
+
+Redux:
+You can understand redux as a kind of data layer in which you can send the data using dispatch and then retrieve data at any point in your code.
+
+import { createSlice } from "@reduxjs/toolkit";
+
+export const userSlice = createSlice({
+  name: "user",
+  initialState: {
+    user: null,
+  },
+  reducers: {
+    login: (state, action) => {
+      state.user = action.payload;
+    },
+    logout: (state) => {
+      state.user = null;
+    },
+  },
+});
+
+export const { login, logout } = userSlice.actions;
+export const selectUser = (state) => state.user.user;
+
+export default userSlice.reducer;
+
+
+
+STORE:
+import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "../features/userSlice";
+
+export const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
+
+
+
+ 
+DEPLOYED APP: https://linkedin-h.netlify.app/    (only for pcs not responsive for mobile phones)
+
