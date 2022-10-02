@@ -128,4 +128,8 @@ DAY 46-50 :Linkedin with react,redux and firebase{
    
    Day 50: completing the redux part and deploying the app
   
+                                                  
+                                                     https://linkedin-h.netlify.app/
+                                                     
+   
 }
