@@ -135,3 +135,21 @@ DAY 46-50 :Linkedin with react,redux and firebase
                                                      
    
    }
+
+DAY 51-54 :Netflix  with react,redux and firebase with login authentication and Onclick functionality
+
+  {
+   
+   DAY 51: Making login page and main page
+   
+   Day 52: connecting all screens
+   
+   DAY 53: Introducing redux for login and logout
+   
+   Day 54: integrating firebase authorization and deploying
+                                                  
+                                                     https://linkedin-h.netlify.app/
+                                                     
+   
+   }
+
