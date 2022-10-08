@@ -1,0 +1,93 @@
+
+IF THERES A USER so don't go to login page directly go to main page:
+
+const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login({
+            uid: userAuth.uid,
+            email: userAuth.email,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+    return unsubscribe;
+  }, [dispatch]);
+  
+  
+  Login Store:
+  
+  REDUX:
+  import { createSlice } from "@reduxjs/toolkit";
+
+export const userSlice = createSlice({
+  name: "user",
+  initialState: {
+    user: null,
+  },
+  // The `reducers` field lets us define reducers and generate associated actions
+  reducers: {
+    login: (state, action) => {
+      state.user = action.payload;
+    },
+    logout: (state) => {
+      state.user = null;
+    },
+  },
+});
+
+export const { login, logout } = userSlice.actions;
+export const selectUser = (state) => state.user.user;
+
+export default userSlice.reducer;
+
+
+
+store.js
+import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "../features/userSlice";
+export const store = configureStore({
+  reducer: {
+    user: userReducer,
+  },
+});
+
+
+SIGN IN AND SIGN UP OnClick functions:
+
+ const register = (e) => {
+    e.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {})
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
+  const signIn = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {})
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
+
+
+
+
