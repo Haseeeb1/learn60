@@ -1,0 +1,42 @@
+TMDB API KEY:const API_KEY = "Your key";
+
+Accessing data:
+
+const requests = {
+  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+  fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+  fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+  fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
+  fetchDocumantaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+};
+
+export default requests;
+
+
+
+firebase config :
+
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+
+const firebaseConfig = {
+  apiKey: "Your key",
+  authDomain: "netflix-2-2fad6.firebaseapp.com",
+  databaseURL:
+    "https://netflix-2-2fad6-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "netflix-2-2fad6",
+  storageBucket: "netflix-2-2fad6.appspot.com",
+  messagingSenderId: "809018501964",
+  appId: "1:809018501964:web:405ea05eaab6e1fbb9fde9",
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export { auth };
+export default db;
