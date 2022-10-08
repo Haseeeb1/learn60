@@ -147,8 +147,14 @@ DAY 51-54 :Netflix  with react,redux and firebase with login authentication and 
    DAY 53: Introducing redux for login and logout
    
    Day 54: integrating firebase authorization and deploying
+   
+   REPOSITORY:
+   
+                               https://github.com/Haseeeb1/NETFLIX-2.0-with-firebase-authentication
                                                   
-                                                     https://linkedin-h.netlify.app/
+    DEPLOYED APP:
+    
+                                    https://netflix-h-2.netlify.app/
                                                      
    
    }
