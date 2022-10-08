@@ -31,7 +31,7 @@ DAY 10: Started a full stack mern application building and deploying with a yout
                 
   DAY 14: Learnt how to deploy front end and backend of a website with netlify and heroku.
          
-                      https://memories-storageee.netlify.app/                               
+                   ##   https://memories-storageee.netlify.app/                               
  }
  
  
@@ -49,7 +49,7 @@ DAY 21: Learnt about react-redux
 
 { 
 
-                                                        Day 22-DAY 35 ==> MERNStack-CHAT-APPLICATION
+                                                  #      Day 22-DAY 35 ==> MERNStack-CHAT-APPLICATION
                                                         
 DAY 22: Started to learn and research on tools for a one-to-one and group chat app.
 
@@ -80,10 +80,10 @@ DAY 34: Styling the CHAT component
 
 DAY 35: COMPLETING My first mern-stack-application
 
-                                           https://github.com/Haseeeb1/MERN-CHAT-APP-backend
+                                        ##   https://github.com/Haseeeb1/MERN-CHAT-APP-backend
      
      
-                                           https://github.com/Haseeeb1/MERN-CHAT-APP-frontend
+                                        ##   https://github.com/Haseeeb1/MERN-CHAT-APP-frontend
                                            
 }
 
@@ -94,18 +94,18 @@ DAY 37: Spotify-clone-day1
 
 DAY 38: completing spotify-clone
 
-                           https://github.com/Haseeeb1/SPOTIFY-CLONE-with-Reactjs-and-spotify-web-api
+                          ## https://github.com/Haseeeb1/SPOTIFY-CLONE-with-Reactjs-and-spotify-web-api
 
 DAY 39: Making a netflix clone using ReactJS.
                    
-                                          https://netflix-h.netlify.app/
+                                        ##  https://netflix-h.netlify.app/
 
 
 DAY 40-41: YOUTUBE with ReactJS And MaterialUI Icons
                      
-                               https://github.com/Haseeeb1/YouTube-With-ReactJS
+                             ##  https://github.com/Haseeeb1/YouTube-With-ReactJS
                             
-                                https://youtube-h.netlify.app/
+                              ##  https://youtube-h.netlify.app/
                                 
                                 
 DAY 42: Revising React Hooks
@@ -116,7 +116,7 @@ DAY 44: Reading react-redux documentation
 
 DAY 45: React-redux youtube tutotrial
 
-DAY 46-50 :Linkedin with react,redux and firebase
+# DAY 46-50 :Linkedin with react,redux and firebase
 
   {
    
@@ -131,12 +131,12 @@ DAY 46-50 :Linkedin with react,redux and firebase
    Day 50: completing the redux part and deploying the app
   
                                                   
-                                                     https://linkedin-h.netlify.app/
+                                                 ##    https://linkedin-h.netlify.app/
                                                      
    
    }
 
-DAY 51-54 :Netflix  with react,redux and firebase with login authentication and Onclick functionality
+# DAY 51-54 :Netflix  with react,redux and firebase with login authentication and Onclick functionality
 
   {
    
@@ -150,11 +150,11 @@ DAY 51-54 :Netflix  with react,redux and firebase with login authentication and 
    
    REPOSITORY:
    
-                               https://github.com/Haseeeb1/NETFLIX-2.0-with-firebase-authentication
+                              ## https://github.com/Haseeeb1/NETFLIX-2.0-with-firebase-authentication
                                                   
     DEPLOYED APP:
     
-                                    https://netflix-h-2.netlify.app/
+                                ##    https://netflix-h-2.netlify.app/
                                                      
    
    }
