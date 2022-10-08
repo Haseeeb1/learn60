@@ -1,0 +1,51 @@
+Profile screen:
+
+return (
+    <div className="profileScreen">
+      <Nav />
+      <div className="profileScreen__body">
+        <h1>Profile</h1>
+        <div className="profileScreen__info">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt=""
+          />
+          <div className="profileScreen__details">
+            <h2>{user.email}</h2>
+            <div className="profileScreen__plans">
+              <h3 onClick={() => navigate("/")}>Go Back?</h3>
+              <h6>Remove Account?</h6>
+
+              <button
+                onClick={() => auth.signOut()}
+                className="profileScreen__signOut"
+              >
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ProfileScreen;
+
+
+
+USING react-router-dom for redirecting:
+APP.JS
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+<Router>
+        {!user ? (
+          <Login />
+        ) : (
+          <Routes>
+            <Route exact path="/profile" element={<ProfileScreen />} />
+            <Route exact path="/" element={<HomeScreen />} />
+          </Routes>
+        )}
+      </Router>
