@@ -142,7 +142,7 @@ DAY 51-54 :Netflix  with react,redux and firebase with login authentication and 
    
    DAY 51: Making login page and main page
    
-   Day 52: connecting all screens
+   Day 52: connecting all screens using react-router-dom
    
    DAY 53: Introducing redux for login and logout
    
