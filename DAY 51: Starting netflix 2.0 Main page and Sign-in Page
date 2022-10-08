@@ -1,1 +1,109 @@
+import React from "react";
+import Banner from "../Banner";
+import "./HomeScreen.css";
+import Nav from "../Nav";
+import Row from "../Row.js";
+import requests from "../requests";
+
+function HomeScreen() {
+  return (
+    <div className="homeScreen">
+      <Nav />
+      <Banner />
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginals}
+        isLargeRow
+      />
+      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumantaries} />
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+    </div>
+  );
+}
+
+export default HomeScreen;
+
+
+LOGIN PAGE:
+
+
+import React, { useState } from "react";
+import "./Login.css";
+import SignInScreen from "./SignInScreen";
+function Login() {
+  const [signIn, setSignIn] = useState(false);
+
+  return (
+    <div className="loginScreen">
+      <div className="loginScreen__background">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
+          className="loginScreen__logo"
+          alt=""
+        />
+        <button onClick={() => setSignIn(true)} className="loginScreen__button">
+          Sign In
+        </button>
+        <div className="loginScreen__gradient" />
+      </div>
+      <div className="loginScreen__body">
+        {signIn ? (
+          <SignInScreen />
+        ) : (
+          <>
+            <h1>Unlimited films,TV programmes and more</h1>
+            <h2>Watch anywhere.Cancel at anytime</h2>
+            <h3>
+              Ready to watch?Enter your email to create or restart your
+              membership
+            </h3>
+            <div className="loginScreen__input">
+              <form>
+                <button
+                  onClick={() => setSignIn(true)}
+                  className="loginScreen__getStarted"
+                >
+                  REGISTER NOW
+                </button>
+              </form>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+SIGN IN SCREEN:
+
+  return (
+    <div className="signupScreen">
+      <form>
+        <h1>Sign In</h1>
+        <input ref={emailRef} placeholder="Email" type="email" />
+        <input ref={passwordRef} placeholder="Password" type="password" />
+        <button type="submit" onClick={signIn}>
+          Sign In
+        </button>
+        <h4>
+          <span className="signupScreen__gray">New to Netflix? </span>
+          <span onClick={register} className="signupScreen__link">
+            {" "}
+            Sign Up now.
+          </span>
+        </h4>
+      </form>
+    </div>
+  );
+}
+
+export default SignInScreen;
 
