@@ -5,7 +5,7 @@ DAY 1:Components of a website
 
 DAY 2:Building a Simple calculator using Html, css , javascript and storing data with local storage in javascript
 
-DAY 3: Cookies and Local storage using javascript
+DAY 3: Cookies and Local storage using javascript.
 
 DAY 4: TIC TAC TOE using react   ==> src=https://reactjs.org/tutorial/tutorial.html
 
