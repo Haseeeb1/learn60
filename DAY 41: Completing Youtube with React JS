@@ -1,5 +1,6 @@
 Created the main video card components and then passed properties of different videos to it.
-You can change the video props or use some api which gives you data about videos. I passed data copied from youtube videos.
+You can change the video props or use some api which gives you data about videos. I passed data copied from youtube videos.You can also use some dynamic data from a json
+file.
 
 Learning: Reusing Components.
 SEE the complete code here:https://github.com/Haseeeb1/YouTube-With-ReactJS
