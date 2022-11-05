@@ -167,3 +167,5 @@ DAY 45: React-redux youtube tutotrial
 DAY 55: Software Requirements Specification document
 
 DAY 56: How to Make Money From Your Website Using Microtransactions
+
+DAY 57:Top VS Code Tips, Tricks & Extensions to supercharge your workflow
