@@ -171,3 +171,7 @@ DAY 56: How to Make Money From Your Website Using Microtransactions
 DAY 57:Top VS Code Tips, Tricks & Extensions to supercharge your workflow
 
 DAY 58:Sanity.io data store
+
+DAY 59: Starting Ebay 2.0 Challenge
+
+DAY 60(although it took 4 days): Completing the Ebay 2.0 Challenge 
