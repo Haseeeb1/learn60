@@ -1,5 +1,5 @@
 ## learn60
-.
+
 .
 This repository contains all the things i will learn in 60 days starting 11-8-2022.Learn 60 is a challenge to keep the learning spirit going on and challenge myself to learn something daily for two months.
 
