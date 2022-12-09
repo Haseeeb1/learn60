@@ -1,7 +1,7 @@
 Socket io executes a function socket.on{(...)} when a event is emitted from the frontend . I made the following for my chat app.
 
 
-WHEN A NEW USER ENTERS THE CHAT:
+//WHEN A NEW USER ENTERS THE CHAT,emit a function called join room:
 socket.on("join-room", async (newRoom, previousRoom) => {
     socket.join(newRoom);
     socket.leave(previousRoom);
