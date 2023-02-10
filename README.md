@@ -162,8 +162,6 @@ DAY 45: React-redux youtube tutotrial
    }
 
 
-## MY 3rd SEMESTER FOR COMPUTER SOFTWARE ENGINEERING STARTED:
-
 DAY 55: Software Requirements Specification document
 
 DAY 56: How to Make Money From Your Website Using Microtransactions
